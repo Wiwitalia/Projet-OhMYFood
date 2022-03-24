@@ -49,6 +49,7 @@ header img{
 .reserver h1,p{
     margin-left: 10px;
     margin-right: 10px;
+    font-family: Roboto,sans-serif;
 }
 
 .reserver h1{
@@ -135,26 +136,12 @@ header img{
     align-items: center;
     justify-content: center;
 }
-/*.nombre{
-    border: 1px solid;
-    border-radius: 20px;
-}
-
-/.fonctionnement div{
-    border: 1px solid;
-    border-radius: 15px;
-    background-color: grey;
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-}*/
 
 .restaurant{
     background-color: #f6f6f6;
     padding-top: 20px;
     margin: 20px;
+    border-radius: 20px;
 }
 .restaurant h1{
     margin-left: 20px;
@@ -196,105 +183,59 @@ header img{
     top: 1rem;
     right: 0.75rem;
 }
-.cartetxt{
-    flex: 1;
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    position: relative;
     text-decoration: none;
+    color: inherit;
+    display: block;
 }
-
-.cartefoot{
-    padding: 1rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-/*.cartecoeur{
-    height: 2rem;
-    width: 2rem;
-    background-color: initial;
-    border: 0 solid transparent;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    background-color: #000;
-}*/
-
-/*.cartebtn{
-    height: 2rem;
-    width: 2rem;
-    background-color: initial;
-    border: 0 solid transparent;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    background-color: #000;
-}*/
-.cartelike{
-    background-color: #fff!important;
-}
-
-
-/*.cartecoeur:before{
-    opacity: 0;
-    transition: .5s;
-    content: "";
-    background: linear-gradient(0deg,#9356dc,#ff79da);
-}
-
-
-
-
-.cartecoeur:before, .menulike{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+.card__img {
+    height: 12rem;
     width: 100%;
-}*/
-
-.menulike{
-    transition-duration: .25s;
-    /* background-color: #f6f6f6; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    mix-blend-mode: lighten;
-}
-
-
-.coeur{
-    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-}
-
-
-
-
-.card__footer {
+    border: transparent solid 0px;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    object-fit: cover;
+  }
+  .card__badge {
+    background-color: #99E2D0;
+    color: darken(#99E2D0, 50%);
+    padding: 0.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+  }
+  .card__footer {
     padding: 1rem;
     position: relative;
     display: flex;
     align-items: center;
-}
+  }
 
-.card__content {
+  .card__content {
     flex: 1;
-}
+  }
 
-.card__title {
-    margin: 0 0 0.25rem;
-}
-
-.card__subtitle {
+  .card__title {
     margin: 0;
-}
+    margin-bottom: 0.25rem;
+  }
 
-.card__btn {
+  .card__subtitle {
+    margin: 0;
+  }
+
+  .card__btn {
     height: 2rem;
     width: 2rem;
     background-color: initial;
@@ -304,6 +245,9 @@ header img{
     align-items: center;
     justify-content: center;
 }
+.card__btn:hover{
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+  }
 
 .menu__btn {
     height: 2rem;
@@ -317,20 +261,9 @@ header img{
     cursor: pointer;
     position: relative;
     background-color: #000;
-}
-
-.menu__btn:hover >.fa-heart{
-    background: linear-gradient(0deg,#9356dc,#ff79da);
     transition :  0.35s ease-in-out;
+    transition-property : background;
 }
-
-.menu__btn:before {
-    opacity: 0;
-    transition: .5s;
-    content: "";
-    background: linear-gradient(0deg,#9356dc,#ff79da);
-}
-
 
 .menu__btn:before, .menu__like {
     position: absolute;
@@ -340,67 +273,19 @@ header img{
     width: 100%;
 }
 
-
+.card__like {
+    background-color: #fff!important;
+}
 
 .menu__like {
+    transition-duration: .25s;
+    background-color: #f6f6f6;
     display: flex;
     align-items: center;
     justify-content: center;
+    mix-blend-mode: lighten;
 }
 
-.bloc-background{ 
-    transition :  0.35s ease-in-out;
-    transition-property : background;
-  }
-  .to-backgound-opacity{
-    background: linear-gradient(0deg,#9356dc,#ff79da);
-  }
-  .to-backgound-opacity:hover{
-    background:linear-gradient(0deg,#9356dc,#ff79da);
-  }
-  
-  [class^=to-backgound-to]{
-    background: linear-gradient(0deg,#9356dc,#ff79da);
-    background-repeat : no-repeat; 
-  }
-
-/*.footercontenair{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    color:white;
-    background-color: rgb(49, 49, 49);
-    
-}
-footer{
-    background-color: rgb(49, 49, 49);
-    color:white;
-    display: grid;
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-.footerlogo{
-    font-family: Shrikhand,"cursive";
-    font-size: 1.2rem;
-    margin-left: 1rem;
-    color: white;
-}
-.footerliste{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-footer h3{
-    margin-left: 20px;
-}
-footer a{
-    text-decoration: none;
-    color: white;
-    margin-left:20px;
-}
-.footerliste i{
-    margin-right: 20px;
-}*/
 footer {
     background-color: #353535;
 }
@@ -427,6 +312,9 @@ footer span,a{
     }
     .cartes{
         display: flex;
+    }
+    .carte h2,span{
+        display: inline-block;
     }
 }
 
@@ -460,14 +348,8 @@ footer span,a{
 }
 
 
-@keyframes itemAppear {
-    0% {
-      transform: scale(0)
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+
+
 
 @keyframes loader {
     100% {
@@ -491,4 +373,4 @@ footer span,a{
     }
     
   }
-
+ 
