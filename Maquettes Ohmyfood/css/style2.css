@@ -280,6 +280,11 @@ header{
     box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
     cursor: pointer;
 }
+.bouttoncommand:hover {
+    background-color: white;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+  }
+
 
 footer {
     background-color: #353535;
@@ -397,7 +402,7 @@ footer span,a{
     transition-duration: 0.5s;
   }
 
-  .menu:hover .menu__confirmation {
+  .menuitem:hover .menu__confirmation {
     margin-right: -1rem;
   }
 
@@ -414,7 +419,7 @@ footer span,a{
 
   }
 
-  .menu:hover .menu__wrapIcon {
+  .menuitem:hover .menu__wrapIcon {
     transform: rotate(0);
   }
 
