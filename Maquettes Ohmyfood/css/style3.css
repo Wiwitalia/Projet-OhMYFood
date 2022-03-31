@@ -1,15 +1,19 @@
+/*General*/
 body{
     margin:0;
 }
 body, html{
     font-family: Roboto,sans-serif;
 }
+.titremenu{
+    font-family: 'Shrikhand', cursive;
+}
 .container{
     max-width: 1280px;
     margin: auto;
     position: relative;
 }
-
+/* Couleurs*/
 .colorPrimaire{
     background-color: #9356DC;
 }
@@ -26,9 +30,11 @@ body, html{
 header{
     text-align: center;
 }
-.logo{
-    width: 50%;
+header img{
+    max-width: 40%;
+    margin-top: 20px;
 }
+
 
 .fleche{
     position: sticky;
@@ -55,9 +61,6 @@ header{
     margin-top: -4rem;
     border-radius: 2rem 2rem 0 0;
     background-color: #f6f6f6;
-}
-.titremenu{
-    font-family: Shrikhand,"cursive";
 }
 
 .carte{
@@ -163,19 +166,6 @@ header{
     color: #99e2d0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .entrees div{
     background-color: white;
     border-radius: 15px;
@@ -190,9 +180,6 @@ header{
     justify-content: space-between;
 }
 
-.titremenu h1{
-    font-family: Shrikhand,"cursive";
-}
 
 .menutitre{
     text-transform: uppercase;
@@ -263,7 +250,7 @@ footer span,a{
     text-decoration: none;
 }
 
-
+/* Responsive */
 
 @media screen and (min-width: 1200px){
    .carterestau{
@@ -280,7 +267,7 @@ footer span,a{
     bottom: 0;
     }
 }
-
+/* Animations */
 .delay-0 {
     animation-delay: 0s;
 }
@@ -308,6 +295,15 @@ footer span,a{
 .delay-8 {
     animation-delay: .8s;
 }
+
+@keyframes itemAppear {
+    0% {
+      transform: scale(0)
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
 .menuItem {
     background-color: white;
@@ -417,11 +413,4 @@ footer span,a{
 }
 
 
-@keyframes itemAppear {
-    0% {
-      transform: scale(0)
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+
