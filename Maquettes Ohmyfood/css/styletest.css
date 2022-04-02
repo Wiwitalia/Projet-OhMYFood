@@ -152,7 +152,20 @@
   }
 
 
+  .menu__like--bg {
+  opacity: 0;
+  transition-duration: 0.5s;
+  background-color: #9356DC;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+}
 
+.menu__like--bg{
+  opacity: 0;
+}
 
-
-
+.menu__like--Nobg{
+  opacity: 1;
+}
