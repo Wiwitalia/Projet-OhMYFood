@@ -123,7 +123,9 @@ header img{
     left: -1%;
 }
 .liste:hover{
-    
+    background-color: white;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+    cursor: pointer;
 }
 
 
@@ -183,56 +185,61 @@ header img{
     right: 0.75rem;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 2rem;
-    row-gap: 2rem;
-}
-.card {
-    background-color: white;
-    border-radius: 1rem;
-    position: relative;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-.card__img {
-    height: 12rem;
-    width: 100%;
-    border: transparent solid 0px;
-    border-radius: 1rem 1rem 0 0;
-    box-shadow: none;
-    object-fit: cover;
-  }
-  .card__badge {
-    background-color: #99E2D0;
-    color: darken(#99E2D0, 50%);
-    padding: 0.5rem;
-    border-radius: 0.125rem;
-    position: absolute;
-    top: 1rem;
-    right: 0.75rem;
-  }
-  .card__footer {
+.card__footer {
     padding: 1rem;
     position: relative;
     display: flex;
     align-items: center;
-  }
+}
 
-  .card__content {
+.card__content {
     flex: 1;
-  }
+}
 
-  .card__title {
+.card__title {
+    margin: 0 0 0.25rem;
+}
+
+.card__subtitle {
     margin: 0;
-    margin-bottom: 0.25rem;
+}
+
+.card__btn {
+    height: 2rem;
+    width: 2rem;
+    background-color: initial;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #000;
+    transition :  0.35s ease-in-out;
+    transition-property : background;
+}
+.card__btn:hover{
+    background: linear-gradient(0deg,#9356dc,#ff79da);
   }
 
+
+.menu__like {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition-duration: .25s;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: lighten;
+}
 
 .menu__like--bg {
-    opacity: 1;
+    opacity: 0;
     transition-duration: 0.5s;
     background-color: #9356DC;
     background-size: 100%;
@@ -241,8 +248,9 @@ header img{
     background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   }
 
-  .menu__like--Nobg{
-    opacity: 0;
+  
+.menu__like--Nobg{
+    opacity: 1;
   }
 
 

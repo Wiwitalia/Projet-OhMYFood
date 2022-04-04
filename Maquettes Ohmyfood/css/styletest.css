@@ -26,44 +26,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.card__btn:hover{
-    background: linear-gradient(0deg,#9356dc,#ff79da);
-  }
-
-.menu__btn {
-    height: 2rem;
-    width: 2rem;
-    background-color: initial;
-    border: 0 solid transparent;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     position: relative;
     background-color: #000;
     transition :  0.35s ease-in-out;
     transition-property : background;
 }
+.card__btn:hover{
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+  }
 
 
-
-
-
-.menu__btn:before, .menu__like {
+.menu__like {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-}
-
-.card__like {
-    background-color: #fff!important;
-}
-
-.menu__like {
     transition-duration: .25s;
     background-color: #f6f6f6;
     display: flex;
@@ -72,21 +51,9 @@
     mix-blend-mode: lighten;
 }
 
-.bloc-background{ 
-    transition :  0.35s ease-in-out;
-    transition-property : background;
-  }
-  .to-backgound-opacity{
-    background: rgba(171,220,40,0);
-  }
-  .to-backgound-opacity:hover{
-    background: rgba(171,220,40,1);
-  }
-  
-  [class^=to-backgound-to]{
-    background: linear-gradient(rgba(171,220,40,1),rgba(171,220,40,1));
-    background-repeat : no-repeat; 
-  }
+.card__like {
+    background-color: #fff!important;
+}
 
   .loader__itemContainer {
     display: flex;

@@ -56,7 +56,67 @@ header img{
     width: 100%;
     object-fit: cover;
 }
+.card__footer {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 
+.card__content {
+    flex: 1;
+}
+
+.card__title {
+    margin: 0 0 0.25rem;
+}
+
+.card__subtitle {
+    margin: 0;
+}
+
+.card__btn {
+    height: 2rem;
+    width: 2rem;
+    background-color: initial;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition :  0.35s ease-in-out;
+    transition-property : background;
+}
+.card__btn:hover{
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+  }
+
+
+.menu__like {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition-duration: .25s;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: lighten;
+}
+
+.menu__like--bg {
+    opacity: 0;
+    transition-duration: 0.5s;
+    background-color: #9356DC;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  }
 .menu{
     margin-top: -4rem;
     border-radius: 2rem 2rem 0 0;
@@ -180,48 +240,7 @@ header img{
     justify-content: space-between;
 }
 
-.bloc-background{ 
-    transition :  0.35s ease-in-out;
-    transition-property : background;
-  }
-  .to-backgound-opacity{
-    background: rgba(171,220,40,0);
-  }
-  .to-backgound-opacity:hover{
-    background:  linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-  }
-  
-   [class=to-backgound-to]{
-    background:  linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-    background-repeat : no-repeat; 
-  }
 
-
-
-.menutitre{
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 0.5rem;
-    font-weight: 400;
-}
-.menutitre::after{
-    content: "";
-    width: 3rem;
-    height: 0.25rem;
-    background-color: #99e2d0;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    margin-left: 20px;
-}
-
-.prix{
-    font-weight: 700;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: 0.5rem;
-}
 
 
 
