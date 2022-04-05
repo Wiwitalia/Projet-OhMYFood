@@ -168,6 +168,105 @@ header img{
     align-items: center;
     justify-content: space-between;
 }
+.menuItem {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    border-radius: 0.75rem;
+    margin: 1rem 0;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    animation: itemAppear .8s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    transform: scale(0);
+    max-width: 100%;
+}
+.menuItem__header {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+  }
+
+ .menuItem__title {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .menuItem__description {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .menuItem__price {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 0.5rem;
+  }
+
+  .menuItem__confirmation {
+    margin: -1rem -5rem -1rem 1rem;
+    width: 4rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition-duration: 0.5s;
+  }
+
+  .menuItem:hover .menuItem__confirmation {
+    margin-right: -1rem;
+  }
+
+  .menuItem__wrapIcon {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+
+  }
+
+  .menuItem:hover .menuItem__wrapIcon {
+    transform: rotate(0);
+  }
+
+
+  .menuItem__confirmation {
+    background-color: #99e2d0;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+}
+
+.menuItem__wrapIcon {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: .5s;
+}
+
+.menuItem__icon {
+    color: #99e2d0;
+}
 
 
 
@@ -270,105 +369,7 @@ footer span,a{
     }
   }
 
-.menuItem {
-    background-color: white;
-    padding: 1rem;
-    display: flex;
-    border-radius: 0.75rem;
-    margin: 1rem 0;
-    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    cursor: pointer;
-    animation: itemAppear .6s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both;
-    transform: scale(0);
-    max-width: 100%;
-}
-.menuItem__header {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    flex: 1;
-  }
 
- .menuItem__title {
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  .menuItem__description {
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  .menuItem__price {
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: 0.5rem;
-  }
-
-  .menuItem__confirmation {
-    margin: -1rem -5rem -1rem 1rem;
-    width: 4rem;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition-duration: 0.5s;
-  }
-
-  .menuItem:hover .menuItem__confirmation {
-    margin-right: -1rem;
-  }
-
-  .menuItem__wrapIcon {
-    height: 1.6rem;
-    width: 1.6rem;
-    background-color: white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius: 100px;
-    transform: rotate(180deg);
-    transition-duration: 0.5s;
-
-  }
-
-  .menuItem:hover .menuItem__wrapIcon {
-    transform: rotate(0);
-  }
-
-
-  .menuItem__confirmation {
-    background-color: #99e2d0;
-    margin: -1rem -5rem -1rem 1rem;
-    width: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: .5s;
-}
-
-.menuItem__wrapIcon {
-    height: 1.6rem;
-    width: 1.6rem;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    transform: rotate(180deg);
-    transition-duration: .5s;
-}
-
-.menuItem__icon {
-    color: #99e2d0;
-}
 
 
 
