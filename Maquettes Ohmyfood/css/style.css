@@ -127,7 +127,9 @@ header img{
     box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
     cursor: pointer;
 }
-
+.mini:hover{
+    color: #9356DC;
+}
 
 .liste span{
     margin-left: 1rem;
@@ -174,9 +176,9 @@ header img{
     display: block;
     margin: 20px;
 }
-.carte:hover{
+/*.carte:hover{
     transform: scale(1.1);
-}
+}*/
 .badge{
     background-color: #99e2d0;
     color: #1b6150;

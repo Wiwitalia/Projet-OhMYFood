@@ -5,7 +5,7 @@ body{
 body, html{
     font-family: Roboto,sans-serif;
 }
-.titremenu{
+.titremenu1{
     font-family: 'Shrikhand', cursive;
 }
 .container{
@@ -156,76 +156,6 @@ header img{
     padding-left: 20px;
 }
 
-.menuitem{
-    background-color: #fff;
-    padding: 1rem;
-    display: flex;
-    border-radius: 0.75rem;
-    margin: 1rem 0;
-    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
-    overflow: hidden;
-    cursor: pointer;
-    animation: itemAppear .6s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both;
-    transform: scale(0);
-    max-width: 100%;
-}
-.menuitemheader{
-    flex: 1;
-}
-
-.menuitemheader, .menuitemtitre {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-
-.menuitemtitre{
-    margin: 0;
-}
-
-.menuitemdescription{
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.menuitemprix{
-    font-weight: 700;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: 0.5rem;
-}
-
-.menuitemconfirm{
-    background-color: #99e2d0;
-    margin: -1rem -5rem -1rem 1rem;
-    width: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: .5s;
-}
-.menuitemwrap{
-    height: 1.6rem;
-    width: 1.6rem;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    transform: rotate(180deg);
-    transition-duration: .5s;
-}
-
-.menuitemicon{
-    color: #99e2d0;
-}
-
 .entrees div{
     background-color: white;
     border-radius: 15px;
@@ -234,7 +164,6 @@ header img{
 }
 
 .titremenu{
-    padding: 1rem 2rem 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -356,27 +285,27 @@ footer span,a{
     transform: scale(0);
     max-width: 100%;
 }
-.menu__header {
+.menuItem__header {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     flex: 1;
   }
 
- .menu__title {
+ .menuItem__title {
     margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
 
-  .menu__description {
+  .menuItem__description {
     margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  .menu__price {
+  .menuItem__price {
     font-weight: bold;
     display: flex;
     justify-content: flex-end;
@@ -384,7 +313,7 @@ footer span,a{
     padding-left: 0.5rem;
   }
 
-  .menu__confirmation {
+  .menuItem__confirmation {
     margin: -1rem -5rem -1rem 1rem;
     width: 4rem;
     display:flex;
@@ -393,11 +322,11 @@ footer span,a{
     transition-duration: 0.5s;
   }
 
-  .menu:hover .menu__confirmation {
+  .menuItem:hover .menuItem__confirmation {
     margin-right: -1rem;
   }
 
-  .menu__wrapIcon {
+  .menuItem__wrapIcon {
     height: 1.6rem;
     width: 1.6rem;
     background-color: white;
@@ -410,17 +339,10 @@ footer span,a{
 
   }
 
-  .menu:hover .menu__wrapIcon {
+  .menuItem:hover .menuItem__wrapIcon {
     transform: rotate(0);
   }
 
- 
-  .wrapBtn {
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-    padding: 3rem 0;
-  }
 
   .menuItem__confirmation {
     background-color: #99e2d0;
