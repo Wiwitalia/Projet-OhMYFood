@@ -89,10 +89,30 @@ header img{
     transition :  0.35s ease-in-out;
     transition-property : background;
 }
-.card__btn:hover{
+/*.card__btn:hover{
     background: linear-gradient(0deg,#9356dc,#ff79da);
-  }
+  }*/
 
+  .menu__like--bg {
+    opacity: 0;
+    transition-duration: 0.5s;
+    background-color: #9356DC;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  }
+  .menu__like--noBg {
+    opacity: 1;
+    transition-duration: 0.5s;
+    position: absolute;
+  }
+.card__btn:hover .menu__like--bg{
+    opacity: 1;
+  }
+.card__btn:hover .menu__like--noBg{
+    opacity: 0;
+  }
 
 .menu__like {
     position: absolute;
@@ -190,12 +210,6 @@ header img{
     flex: 1;
   }
 
- .menuItem__title {
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
 
   .menuItem__description {
     margin: 0;
