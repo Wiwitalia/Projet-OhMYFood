@@ -89,9 +89,6 @@ header img{
     transition :  0.35s ease-in-out;
     transition-property : background;
 }
-/*.card__btn:hover{
-    background: linear-gradient(0deg,#9356dc,#ff79da);
-  }*/
 
   .menu__like--bg {
     opacity: 0;
