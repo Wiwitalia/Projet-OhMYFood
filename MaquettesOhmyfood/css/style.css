@@ -23,11 +23,9 @@ body{
 .container{
     max-width: 1280px;
     margin: auto;
-    position: relative;
 }
 /* Header*/
 header{
-    /*font-family: "Shrikhand", cursive;*/
     text-align: center;
 }
 
@@ -89,7 +87,6 @@ header img{
 }
 
 .listes{
-    margin: 0;
     margin-right: 15px;
     padding: 0;
     list-style: none;
@@ -171,14 +168,9 @@ h2{
     background-color: #fff;
     border-radius: 1rem;
     position: relative;
-    text-decoration: none;
-    color: inherit;
-    display: block;
     margin: 20px;
 }
-/*.carte:hover{
-    transform: scale(1.1);
-}*/
+
 .badge{
     background-color: #99e2d0;
     color: #1b6150;
@@ -191,7 +183,6 @@ h2{
 
 .card__footer {
     padding: 1rem;
-    position: relative;
     display: flex;
     align-items: center;
 }
@@ -204,37 +195,19 @@ h2{
     margin: 0 0 0.25rem;
 }
 
-.card__subtitle {
-    margin: 0;
-}
-
 .card__btn {
-    height: 2rem;
-    width: 2rem;
-    background-color: initial;
-    border: 0 solid transparent;
-    padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    position: relative;
-    transition :  0.35s ease-in-out;
-    transition-property : background;
     color: black;
 }
 
 .menu__like--bg {
     opacity: 0;
-    transition-duration: 0.5s;
-    background-color: #9356DC;
-    background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   }
   .menu__like--noBg {
-    opacity: 1;
     transition-duration: 0.5s;
     position: absolute;
   }
@@ -251,8 +224,6 @@ footer {
     background-color: #353535;
 }
 .footer .container{
-    display: flex;
-    flex-direction: column;
     padding: 1rem;
 }
 .footerliste{

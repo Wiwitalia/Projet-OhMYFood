@@ -9,8 +9,6 @@ body, html{
     font-family: 'Shrikhand', cursive;
 }
 .container{
-    max-width: 1280px;
-    margin: auto;
     position: relative;
 }
 /* Couleurs*/
@@ -35,7 +33,6 @@ header img{
     margin-top: 20px;
 }
 
-
 .fleche{
     position: sticky;
     left: 2rem;
@@ -58,7 +55,6 @@ header img{
 }
 .card__footer {
     padding: 1rem;
-    position: relative;
     display: flex;
     align-items: center;
 }
@@ -76,54 +72,26 @@ header img{
 }
 
 .card__btn {
-    height: 2rem;
-    width: 2rem;
-    background-color: initial;
-    border: 0 solid transparent;
-    padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    position: relative;
-    transition :  0.35s ease-in-out;
-    transition-property : background;
 }
 
-  .menu__like--bg {
+.menu__like--bg {
     opacity: 0;
-    transition-duration: 0.5s;
-    background-color: #9356DC;
-    background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
-  }
-  .menu__like--noBg {
-    opacity: 1;
+}
+.menu__like--noBg {
     transition-duration: 0.5s;
     position: absolute;
-  }
+}
 .card__btn:hover .menu__like--bg{
     opacity: 1;
   }
 .card__btn:hover .menu__like--noBg{
     opacity: 0;
   }
-
-/*.menu__like {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transition-duration: .25s;
-    background-color: #f6f6f6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    mix-blend-mode: lighten;
-}*/
 
 .menu{
     margin-top: -4rem;
@@ -132,8 +100,7 @@ header img{
 }
 
 .carte{
-    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
-    
+    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);    
 }
 
 .carterestau{
@@ -141,7 +108,6 @@ header img{
 }
 
 .submenu{
-    max-width: 100%;
     overflow: hidden;
     padding: 0 1rem;
 }
@@ -186,51 +152,47 @@ header img{
     overflow: hidden;
     cursor: pointer;
     animation: itemAppear .8s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
     animation-fill-mode: both;
-    transform: scale(0);
-    max-width: 100%;
 }
 .menuItem__header {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     flex: 1;
-  }
+}
 
- h4, p{
+h4, p{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-  }
-  .menuItem__description {
+}
+.menuItem__description {
     margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-  }
-  .menuItem__price {
+}
+.menuItem__price {
     font-weight: bold;
     display: flex;
-    justify-content: flex-end;
     align-items: flex-end;
-    padding-left: 0.5rem;
-  }
+}
 
-  .menuItem__confirmation {
+.menuItem__confirmation {
+    background-color: #99e2d0;
     margin: -1rem -5rem -1rem 1rem;
     width: 4rem;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition-duration: 0.5s;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+}
 
-  .menuItem:hover .menuItem__confirmation {
+.menuItem:hover .menuItem__confirmation {
     margin-right: -1rem;
-  }
+}
 
-  .menuItem__wrapIcon {
+.menuItem__wrapIcon {
     height: 1.6rem;
     width: 1.6rem;
     background-color: white;
@@ -241,42 +203,15 @@ header img{
     transform: rotate(180deg);
     transition-duration: 0.5s;
 
-  }
-
-  .menuItem:hover .menuItem__wrapIcon {
-    transform: rotate(0);
-  }
-
-
-  .menuItem__confirmation {
-    background-color: #99e2d0;
-    margin: -1rem -5rem -1rem 1rem;
-    width: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: .5s;
 }
 
-.menuItem__wrapIcon {
-    height: 1.6rem;
-    width: 1.6rem;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    transform: rotate(180deg);
-    transition-duration: .5s;
+.menuItem:hover .menuItem__wrapIcon {
+    transform: rotate(0);
 }
 
 .menuItem__icon {
     color: #99e2d0;
 }
-
-
-
-
 
 .commander{
     display: flex;
@@ -288,7 +223,6 @@ header img{
 .bouttoncommand{
     border: 0;
     padding: 0.75rem 1.5rem;
-    font-weight: 500;
     font-size: 1.1rem;
     border-radius: 100px;
     color: #fff;
