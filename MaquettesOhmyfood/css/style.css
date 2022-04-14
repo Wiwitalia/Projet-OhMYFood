@@ -237,7 +237,7 @@ footer span,a{
 }
 
 /* Responsive */
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 600px){
     .listes{
         display: flex;
         justify-content: space-between;
@@ -283,16 +283,16 @@ footer span,a{
 }
 
 .loader__item--1 {
-    background-color: #9356dc;
+    background-color: green;
 }
 
 .loader__item--2 {
-    background-color: #ff79da;
+    background-color: grey;
     animation-delay: .25s;
 }
 
 .loader__item--3 {
-    background-color: #99e2d0;
+    background-color: red;
     animation-delay: .5s;
 }
 
