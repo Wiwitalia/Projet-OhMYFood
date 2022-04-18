@@ -62,7 +62,7 @@ header img{
     color:rgb(197, 195, 195);
 }
 
-.explore{
+.explore{                                       /* Boutton explorer nos restaurants avec au survol le curseur qui passe en pointeur et un effet d'ombre */
     border: 0;
     padding: 0.75rem 1.5rem;
     font-weight: 500;
@@ -72,7 +72,7 @@ header img{
     background-color: #686868;
     background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
     cursor: pointer;
-    transition-duration: .25s;
+    transition-duration: .50s;
     box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
     text-decoration: none;
 }
@@ -106,7 +106,7 @@ header img{
 }
 
 .liste:before{
-    counter-increment: compteListe 1;
+    counter-increment: compteListe 1;    /* Mise en place de la liste 1 2 3 */
     content: counter(compteListe) " ";
     background: #9356dc;
     height: 1.5rem;
@@ -120,12 +120,12 @@ header img{
     left: -1%;
 }
 .liste:hover{
-    background-color: white;
+    background-color: white;  /* Changement de couleur au survol et un effet d'ombre */ 
     box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
     cursor: pointer;
 }
 .mini:hover{
-    color: #9356DC;
+    color: #9356DC;  /* Les logos changent de couleur au survol */
 }
 
 .liste span{
@@ -172,7 +172,7 @@ h2{
 }
 
 .badge{
-    background-color: #99e2d0;
+    background-color: #99e2d0;       /* Mise en place du badge nouveau */ 
     color: #1b6150;
     padding: 0.5rem;
     border-radius: 0.125rem;
@@ -201,7 +201,7 @@ h2{
     color: black;
 }
 
-.menu__like--bg {
+.menu__like--bg {             /* Mise en place du coeur et de son remplissage au survol*/
     opacity: 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -237,7 +237,7 @@ footer span,a{
 }
 
 /* Responsive */
-@media screen and (min-width: 600px){
+@media screen and (min-width: 812px){  /* La liste de mes restaurants s'aligne les uns a coté des autres */
     .listes{
         display: flex;
         justify-content: space-between;
@@ -251,8 +251,80 @@ footer span,a{
 }
 
 /* Animations */
+.loadscreen{
+    background: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 0.2s 3s forwards;
+}
+.spinnerbig{
+    position: absolute;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    border: 3rem solid rgba(161, 160, 160, 0);
+    border-top: 3rem solid #9356dc;
+    border-left: 3rem solid #9356dc;
+    border-bottom: 3rem solid #9356dc;
+    animation: spinneroff 0.8s 0.2s 5;
+}
+.spinner{
+    border: 2rem solid rgba(161, 160, 160, 0);
+    border-top: 2rem solid #ff79da;
+    border-right: 2rem solid #ff79da;
+    border-bottom: 2rem solid #ff79da;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    opacity: 1;
+    animation: spinner 0.8s 0.2s 5;
+    position: absolute;
+}
+.spinnersmall{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1.5rem solid rgba(161, 160, 160, 0);
+    border-top: 1.5rem solid #99e2d0;
+    border-left: 1.5rem solid #99e2d0;
+    border-bottom: 1.5rem solid #99e2d0;
+    animation: spinneroff 0.8s 0.2s 5;
+}
+@keyframes fadeout{    /* Mise en place de l'animation ou je lui demande d'etre visible au debut puis de disparaitre */  
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+@keyframes spinneroff{     /* Je demande a mes 2 cercle de tourner sur eux meme  */
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes spinner{      /* Je demande au cercle du mileu de tourner dans le sens inverse des 2 autres cercles */
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
-.loader {
+
+/*.loader {
     position: fixed;
     height: 100%;
     width: 100%;
