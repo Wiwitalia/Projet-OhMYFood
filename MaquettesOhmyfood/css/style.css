@@ -181,40 +181,40 @@ h2{
     right: 0.75rem;
 }
 
-.card__footer {
+.cardfooter {
     padding: 1rem;
     display: flex;
     align-items: center;
 }
 
-.card__content {
+.cardcontent {
     flex: 1;
 }
 
-.card__title {
+.cardtitle {
     margin: 0 0 0.25rem;
 }
 
-.card__btn {
+.cardbtn {
     display: flex;
     cursor: pointer;
     color: black;
 }
 
-.menu__like--bg {             /* Mise en place du coeur et de son remplissage au survol*/
+.menulike-bg {             /* Mise en place du coeur et de son remplissage au survol*/
     opacity: 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   }
-  .menu__like--noBg {
+.menulike-noBg {
     transition-duration: 0.5s;
     position: absolute;
   }
-.card__btn:hover .menu__like--bg{
+.cardbtn:hover .menulike-bg{
     opacity: 1;
   }
-.card__btn:hover .menu__like--noBg{
+.cardbtn:hover .menulike-noBg{
     opacity: 0;
   }
 
@@ -237,7 +237,17 @@ footer span,a{
 }
 
 /* Responsive */
-@media screen and (min-width: 812px){  /* La liste de mes restaurants s'aligne les uns a coté des autres */
+/*Mode tablette */
+@media screen and (min-width: 768px){  /* Alignement de la liste */
+    .listes{
+        display: grid;
+        justify-content: space-around;
+    }
+    
+}
+/* Mode Pc*/
+@media screen and (min-width: 1020px){
+    
     .listes{
         display: flex;
         justify-content: space-between;
@@ -249,88 +259,15 @@ footer span,a{
         display: inline-block;
     }
 }
-
 /* Animations */
-.loadscreen{
-    background: white;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: fadeout 0.2s 3s forwards;
-}
-.spinnerbig{
-    position: absolute;
-    width: 17rem;
-    height: 17rem;
-    border-radius: 50%;
-    border: 3rem solid rgba(161, 160, 160, 0);
-    border-top: 3rem solid #9356dc;
-    border-left: 3rem solid #9356dc;
-    border-bottom: 3rem solid #9356dc;
-    animation: spinneroff 0.8s 0.2s 5;
-}
-.spinner{
-    border: 2rem solid rgba(161, 160, 160, 0);
-    border-top: 2rem solid #ff79da;
-    border-right: 2rem solid #ff79da;
-    border-bottom: 2rem solid #ff79da;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    opacity: 1;
-    animation: spinner 0.8s 0.2s 5;
-    position: absolute;
-}
-.spinnersmall{
-    position: absolute;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    border: 1.5rem solid rgba(161, 160, 160, 0);
-    border-top: 1.5rem solid #99e2d0;
-    border-left: 1.5rem solid #99e2d0;
-    border-bottom: 1.5rem solid #99e2d0;
-    animation: spinneroff 0.8s 0.2s 5;
-}
-@keyframes fadeout{    /* Mise en place de l'animation ou je lui demande d'etre visible au debut puis de disparaitre */  
-    0% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0%;
-        visibility: hidden;
-    }
-}
-@keyframes spinneroff{     /* Je demande a mes 2 cercle de tourner sur eux meme  */
-    0% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-@keyframes spinner{      /* Je demande au cercle du mileu de tourner dans le sens inverse des 2 autres cercles */
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
-/*.loader {
+/* Création du loader */
+.loader {
     position: fixed;
     height: 100%;
     width: 100%;
     left: 0;
     top: 0;
-    background-color: hsla(0,0%,100%,.9);
+    background-color: white;
     animation: loader .01s;
     animation-delay: 1.75s;
     animation-fill-mode: both;
@@ -341,45 +278,40 @@ footer span,a{
 }
 
 .loader__itemContainer {
-    display: flex;
-    width: 5rem;
+    display: flex;      /* Alignement des 3 points du loadder */
+    width: 6rem;
     justify-content: space-between;
 }
 
 .loader__item {
     height: 1rem;
     width: 1rem;
-    border-radius: 1rem;
-    animation: jump 1s;
-    animation-iteration-count: 1;
+    border-radius: 20px;
+    animation: jump 2s;   /* Animation des 3 points qui sautent */
 }
 
 .loader__item--1 {
-    background-color: green;
+    background-color: #9356DC;
 }
 
 .loader__item--2 {
-    background-color: grey;
+    background-color: #FF79DA;
     animation-delay: .25s;
 }
 
 .loader__item--3 {
-    background-color: red;
+    background-color: #99E2D0;
     animation-delay: .5s;
 }
-
-
-
-
 
 @keyframes loader {
     100% {
       opacity: 0;
-      z-index: -10;
+      z-index: -10;   
     }
   } 
   
-  @keyframes jump {
+@keyframes jump {
     0% {
       transform: translateY(0);
     }
@@ -394,4 +326,260 @@ footer span,a{
     }
     
   }
+
+
+
+/* Partie menu */
  
+
+.titremenu1{
+    font-family: 'Shrikhand', cursive;
+}
+.container{
+    position: relative;
+}
+
+.fleche{      /* Je positionne la fleche a coté du nom de mon site */
+    position: sticky;
+    left: 2rem;
+    height: 2rem;
+    width: 2rem;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.pict{
+    max-width: 100%;
+    max-height: 32rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu{
+    margin-top: -4rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #f6f6f6;
+}
+
+.carte{
+    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);    
+}
+
+.carterestau{
+    display: grid;
+}
+
+.submenu{
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.submenutitre{
+    text-transform: uppercase;   /* Majuscule */
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.submenutitre:after {    /* Mise en place de la banniere bleu sous les entrées plats et desserts */
+    content: "";
+    width: 3rem;
+    height: 0.25rem;
+    background-color: #99e2d0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: 20px;
+}
+
+.entrees div{
+    background-color: white;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.titremenu{
+    text-align: start;
+}
+.menuItem {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    border-radius: 0.75rem;
+    margin: 1rem 0;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    animation: itemAppear .8s;
+    animation-fill-mode: both;
+    
+}
+.menuItem__header {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+}
+
+
+.menuItemdescription {
+    margin: 0;
+    white-space: nowrap;     /* Le texte ne va pas a la ligne */
+    text-overflow: ellipsis;    /* Le texte est coupé de 3 petit points */
+    overflow: hidden;
+}
+.menuItemprice {
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+}
+
+.menuItemconfirmation {
+    background-color: #99e2d0;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+}
+
+.menuItem:hover .menuItemconfirmation {
+    margin-right: -1rem;
+}
+
+.menuItemwrapIcon {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+
+}
+
+.menuItem:hover .menuItemwrapIcon {   /* La coche tourne sur elle meme */
+    transform: rotate(0);
+}
+
+.menuItemicon {
+    color: #99e2d0;
+}
+
+.commander{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 3rem 0;
+}
+/* Boutton commander */
+.bouttoncommand{
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    cursor: pointer;
+}
+.bouttoncommand:hover {    /* Mise en place d'effet d'ombre sur le boutton commander au survol*/
+    background-color: white;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+  }
+
+footer {
+    background-color: #353535;
+}
+.footer .container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.footerliste{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+footer span,a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive */
+/* Mode tablette */
+@media screen and (min-width: 768px){
+   .carterestau{
+    grid-template-columns: repeat(3,1fr);   /* Les plats ne sont plus les une sur les autres mais en 3 collones de gauche a droite */
+    column-gap: 1rem;
+    }
+    .submenutitre:after{
+    content: "";    
+    width: 3rem;
+    height: 0.25rem;
+    background-color: #99e2d0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    }
+}
+
+/* Mode Pc*/
+@media screen and (min-width: 1028px){
+    .titremenu1{
+    text-align: -webkit-center;
+    }
+}
+/* Animations */
+  
+.delay-0 {                   /* Mise en place de l'animation pour faire apparaitre les plats les uns apres les autres */
+    animation-delay: 0s;
+}
+.delay-1 {
+    animation-delay: .1s;
+}
+.delay-2 {
+    animation-delay: .2s;
+}
+.delay-3 {
+    animation-delay: .3s;
+}
+.delay-4 {
+    animation-delay: .4s;
+}
+.delay-5 {
+    animation-delay: .5s;
+}
+.delay-6 {
+    animation-delay: .6s;
+}
+.delay-7 {
+    animation-delay: .7s;
+}
+.delay-8 {
+    animation-delay: .8s;
+}
+
+@keyframes itemAppear {
+    0% {
+      transform: scale(0)
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+
+
+

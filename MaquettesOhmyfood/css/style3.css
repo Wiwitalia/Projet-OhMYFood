@@ -75,7 +75,7 @@ header img{
     display: flex;
     cursor: pointer;
 }
-
+/* Animation du coeur */
 .menu__like--bg {
     opacity: 0;
     -webkit-background-clip: text;
@@ -138,9 +138,7 @@ header img{
 }
 
 .titremenu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: start;
 }
 .menuItem {
     background-color: white;
@@ -162,24 +160,20 @@ header img{
     flex: 1;
 }
 
-h4, p{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-.menuItem__description {
+
+.menuItemdescription {
     margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.menuItem__price {
+.menuItemprice {
     font-weight: bold;
     display: flex;
     align-items: flex-end;
 }
 
-.menuItem__confirmation {
+.menuItemconfirmation {
     background-color: #99e2d0;
     margin: -1rem -5rem -1rem 1rem;
     width: 4rem;
@@ -189,11 +183,11 @@ h4, p{
     transition-duration: .5s;
 }
 
-.menuItem:hover .menuItem__confirmation {
+.menuItem:hover .menuItemconfirmation {
     margin-right: -1rem;
 }
 
-.menuItem__wrapIcon {
+.menuItemwrapIcon {
     height: 1.6rem;
     width: 1.6rem;
     background-color: white;
@@ -206,11 +200,11 @@ h4, p{
 
 }
 
-.menuItem:hover .menuItem__wrapIcon {
+.menuItem:hover .menuItemwrapIcon {
     transform: rotate(0);
 }
 
-.menuItem__icon {
+.menuItemicon {
     color: #99e2d0;
 }
 
@@ -257,10 +251,20 @@ footer span,a{
 
 /* Responsive */
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 768px){
    .carterestau{
-        grid-template-columns: repeat(3,1fr);   /* Les plats ne sont plus les une sur les autres mais en 3 collones de gauche a droite */
-        column-gap: 1rem;
+       flex-direction: row;
+       flex-wrap: wrap;
+   }
+}
+@media screen and (min-width: 1028px){
+    .listes{
+    display: grid;
+
+    }
+    .carterestau{
+    grid-template-columns: repeat(3,1fr);   /* Les plats ne sont plus les une sur les autres mais en 3 collones de gauche a droite */
+    column-gap: 1rem;
     }
     .submenutitre:after{
     content: "";    
@@ -313,5 +317,145 @@ footer span,a{
 
 
 
+/*.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(0,0%,100%,.9);
+    animation: loader .01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader__itemContainer {
+    display: flex;
+    width: 5rem;
+    justify-content: space-between;
+}
+
+.loader__item {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    animation: jump 1s;
+    animation-iteration-count: 1;
+}
+
+.loader__item--1 {
+    background-color: green;
+}
+
+.loader__item--2 {
+    background-color: grey;
+    animation-delay: .25s;
+}
+
+.loader__item--3 {
+    background-color: red;
+    animation-delay: .5s;
+}
 
 
+
+
+
+@keyframes loader {
+    100% {
+      opacity: 0;
+      z-index: -10;
+    }
+  } 
+  
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(0.5rem);
+    }
+    75% {
+      transform: translateY(-0.5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+    
+  }
+
+.loadscreen{
+    background: black;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 0.2s 3s forwards;
+}
+.spinnerbig{
+    position: absolute;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    border: 3rem solid rgba(161, 160, 160, 0);
+    border-top: 3rem solid #9356dc;
+    border-left: 3rem solid #9356dc;
+    border-bottom: 3rem solid #9356dc;
+    animation: spinneroff 0.8s 0.2s 5;
+}
+.spinner{
+    border: 2rem solid rgba(161, 160, 160, 0);
+    border-top: 2rem solid #ff79da;
+    border-right: 2rem solid #ff79da;
+    border-bottom: 2rem solid #ff79da;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    opacity: 1;
+    animation: spinner 0.8s 0.2s 5;
+    position: absolute;
+}
+.spinnersmall{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1.5rem solid rgba(161, 160, 160, 0);
+    border-top: 1.5rem solid #99e2d0;
+    border-left: 1.5rem solid #99e2d0;
+    border-bottom: 1.5rem solid #99e2d0;
+    animation: spinneroff 0.8s 0.2s 5;
+}
+@keyframes fadeout{    /* Mise en place de l'animation ou je lui demande d'etre visible au debut puis de disparaitre */  
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+@keyframes spinneroff{     /* Je demande a mes 2 cercle de tourner sur eux meme  */
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes spinner{      /* Je demande au cercle du mileu de tourner dans le sens inverse des 2 autres cercles */
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
