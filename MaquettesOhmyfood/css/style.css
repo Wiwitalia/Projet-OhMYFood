@@ -261,7 +261,7 @@ footer span,a{
 }
 /* Animations */
 /* Création du loader */
-.loader {
+.loader {     /* je positionne mon loader */
     position: fixed;
     height: 100%;
     width: 100%;
@@ -306,23 +306,23 @@ footer span,a{
 
 @keyframes loader {
     100% {
-      opacity: 0;
-      z-index: -10;   
+      opacity: 0;   /* je cache mon loader*/
+      z-index: -10;
     }
   } 
   
-@keyframes jump {
+@keyframes jump {   /* Je fais bouger mon loader */
     0% {
       transform: translateY(0);
     }
     25% {
-      transform: translateY(0.5rem);
+      transform: translateY(2rem);
     }
     75% {
-      transform: translateY(-0.5rem);
+      transform: translateY(-2rem);
     }
     100% {
-      transform: translateY(0);
+      transform: translateY(0); 
     }
     
   }
@@ -416,7 +416,7 @@ footer span,a{
     box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
-    animation: itemAppear .8s;
+    animation: itemAppear .8s; /* Je nomme mon animation */
     animation-fill-mode: both;
     
 }
@@ -460,7 +460,7 @@ footer span,a{
     align-items:center;
     justify-content:center;
     border-radius: 100px;
-    transform: rotate(180deg);
+    transform: rotate(180deg);     /* je fais tourner la coche sur elle meme */ 
     transition-duration: 0.5s;
 
 }
