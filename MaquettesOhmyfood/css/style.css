@@ -105,7 +105,7 @@ header img{
     color: #7e7e7e;
 }
 
-.liste:before{
+.liste::before{
     counter-increment: compteListe 1;    /* Mise en place de la liste 1 2 3 */
     content: counter(compteListe) " ";
     background: #9356dc;
@@ -208,14 +208,14 @@ h2{
     background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   }
 .menulike-noBg {
-    transition-duration: 0.5s;
+    transition-duration: 0.5s;     /* Durée de ma transition */
     position: absolute;
   }
 .cardbtn:hover .menulike-bg{
-    opacity: 1;
+    opacity: 1;              /* Le coeur est visible au survol */
   }
 .cardbtn:hover .menulike-noBg{
-    opacity: 0;
+    opacity: 0;             /* le coeur est totalement transparent */
   }
 
 
@@ -386,7 +386,7 @@ footer span,a{
     font-weight: 400;
 }
 
-.submenutitre:after {    /* Mise en place de la banniere bleu sous les entrées plats et desserts */
+.submenutitre::after {    /* Mise en place de la banniere bleu sous les entrées plats et desserts */
     content: "";
     width: 3rem;
     height: 0.25rem;
@@ -421,8 +421,6 @@ footer span,a{
     
 }
 .menuItem__header {
-    white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
     flex: 1;
 }
@@ -523,7 +521,7 @@ footer span,a{
     grid-template-columns: repeat(3,1fr);   /* Les plats ne sont plus les une sur les autres mais en 3 collones de gauche a droite */
     column-gap: 1rem;
     }
-    .submenutitre:after{
+    .submenutitre::after{
     content: "";    
     width: 3rem;
     height: 0.25rem;
